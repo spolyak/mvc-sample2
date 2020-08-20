@@ -7,34 +7,80 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mvc_sample2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Controller" customModule="mvc_sample2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vo-Il-nd1">
-                                <rect key="frame" x="67" y="315" width="280" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vo-Il-nd1" customClass="CustomPrettyView" customModule="mvc_sample2" customModuleProvider="target">
+                                <rect key="frame" x="67" y="364" width="280" height="168"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LnV-Ui-Zoz" customClass="CustomPrettyView" customModule="mvc_sample2" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wFH-ab-EIc">
                                         <rect key="frame" x="20" y="20" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I really want the" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3L-Yo-0uj">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone MODEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhE-fo-e0v">
+                                                <rect key="frame" x="0.0" y="25.5" width="240" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in iPhone COLOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cld-qv-QfR">
+                                                <rect key="frame" x="0.0" y="51" width="240" height="26"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and it costs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFb-2O-fqK">
+                                                <rect key="frame" x="0.0" y="77" width="240" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$iPhone PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2w-hb-FKP">
+                                                <rect key="frame" x="0.0" y="102.5" width="240" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="wFH-ab-EIc" firstAttribute="top" secondItem="6vo-Il-nd1" secondAttribute="top" constant="20" id="1ER-gX-iam"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFH-ab-EIc" secondAttribute="bottom" constant="20" id="4E7-xQ-eXF"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFH-ab-EIc" secondAttribute="trailing" constant="20" id="CSw-pn-zu1"/>
+                                    <constraint firstAttribute="height" constant="168" id="JJj-W3-QBH"/>
+                                    <constraint firstAttribute="width" constant="280" id="OSi-Br-Dtf"/>
+                                    <constraint firstItem="wFH-ab-EIc" firstAttribute="leading" secondItem="6vo-Il-nd1" secondAttribute="leading" constant="20" id="XJ2-DM-1gW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6vo-Il-nd1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CNO-2f-c0z"/>
+                            <constraint firstItem="6vo-Il-nd1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T0e-LN-izi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="iphoneColorLabel" destination="Cld-qv-QfR" id="Qcr-Aa-oTR"/>
+                        <outlet property="iphoneCostLabel" destination="y2w-hb-FKP" id="CsP-bM-RPJ"/>
+                        <outlet property="iphoneNameLabel" destination="UhE-fo-e0v" id="Up1-hf-53h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
